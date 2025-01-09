@@ -4,6 +4,14 @@ This project uses the [Multi-Cancer Dataset](https://www.kaggle.com/datasets/obu
 
 ---
 
+## 🔍 Why This Project?
+Brain cancer is a critical health issue that requires early and accurate diagnosis to improve treatment outcomes. Traditional diagnostic methods rely heavily on manual interpretation of medical images, which can be time-consuming and prone to errors. This project aims to:
+- Automate the classification of brain cancer types using deep learning.
+- Provide an efficient, reliable, and scalable solution for medical professionals.
+- Support decision-making in clinical settings by highlighting key features in images.
+
+---
+
 ## 📊 Dataset Overview
 
 [Source](https://figshare.com/articles/dataset/brain_tumor_dataset/1512427): Compiled using images provided in a Figshare dataset.
@@ -42,6 +50,20 @@ A custom Convolutional Neural Network (CNN) was designed for this project:
 - **Optimization**: Adam optimizer with learning rate scheduling.
 - **Loss Function**: Categorical Cross-Entropy.
 
+### Tools and Libraries Used
+- **Programming Language**: Python
+- **Deep Learning Framework**: TensorFlow/Keras
+- **Data Analysis**: NumPy, Pandas
+- **Visualization**: Matplotlib, Seaborn
+- **Environment**: Jupyter Notebook, Kaggle GPU P100
+
+### Model Design
+The CNN model was designed with the following considerations:
+- **Feature Extraction**: Multiple convolutional layers to capture spatial hierarchies in the medical images.
+- **Dimensionality Reduction**: Pooling layers to reduce computational complexity while preserving key features.
+- **Overfitting Prevention**: Dropout layers to introduce regularization.
+- **Final Classification**: Fully connected dense layers with softmax activation to classify into three categories.
+
 ---
 
 ## 📈 Results
@@ -66,3 +88,14 @@ The confusion matrix shows very few misclassifications:
 
 ### Training & Validation Curves
 Detailed training and validation accuracy/loss trends are included in the notebook. Grad-CAM visualizations are also provided to interpret the model’s decision-making.
+
+---
+
+## 🌟 Problems Solved
+1. **Manual Effort**: Reduced reliance on manual image interpretation by automating the classification process.
+2. **Accuracy**: Achieved high classification accuracy, minimizing errors in diagnosis.
+3. **Scalability**: Created a scalable solution that can be adapted for other medical imaging tasks.
+4. **Interpretability**: Leveraged Grad-CAM to explain the model’s focus areas.
+
+---
+
