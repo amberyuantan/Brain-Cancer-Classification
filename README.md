@@ -1,43 +1,61 @@
-# Brain Cancer Classification
+# 🧠 Brain Cancer Classification Project
 
-This project implements a deep learning-based approach to classify brain cancer images. Using convolutional neural networks (CNNs), the model is trained on medical imaging data to predict brain cancer categories with high accuracy.
-
----
-
-## Project Overview
-
-- **Objective**: Classify brain cancer images into predefined categories using CNNs.
-- **Dataset**: Medical imaging dataset containing labeled brain cancer scans.
-- **Model**: A custom-built CNN for image classification, with potential for extension to transfer learning models like ResNet or EfficientNet.
+This project uses the [Multi-Cancer Dataset](https://www.kaggle.com/datasets/obulisainaren/multi-cancer) to classify brain cancer images into various types. The dataset includes medical imaging data, and a Convolutional Neural Network (CNN) was developed to achieve high classification accuracy.
 
 ---
 
-## Features
+## 📊 Dataset Overview
 
-- **Data Preprocessing**:
-  - Normalization of pixel values.
-  - Data augmentation to improve model generalization.
-- **Model Architecture**:
-  - Built a CNN model with multiple convolutional and pooling layers.
+The dataset contains images of brain cancer classified into the following categories:
+
+| **Path**             | **Subclass**       | **Description**                      |
+|-----------------------|--------------------|--------------------------------------|
+| `/brain_glioma`      | Glioma            | Most common brain tumor              |
+| `/brain_menin`       | Meningioma        | Tumors affecting brain membranes     |
+| `/brain_tumor`       | Pituitary Tumor   | Tumors affecting the pituitary gland |
+
+### Preprocessing
+- **Image Size**: Resized to **512x512 pixels**.
+- **Normalization**: Pixel values scaled between 0 and 1.
+- **Augmentation**:
+  - Rotation: ±10°
+  - Width/Height Shift: ±10%
+  - Shearing/Zooming: ±10%
+  - Brightness Adjustment: 20%-120%
+  - Horizontal Flip: Randomly flips images for diversity.
+
+---
+
+## 🚀 Model Architecture
+
+A custom Convolutional Neural Network (CNN) was designed for this project:
+- **Input Size**: `(512, 512, 3)`
+- **Architecture**:
+  - Convolutional and pooling layers for feature extraction.
   - Dropout layers for regularization.
-- **Evaluation**:
-  - Metrics include accuracy, precision, recall, and F1-score.
-  - Visualization of training/validation loss and accuracy trends.
-- **Visualization**:
-  - Heatmaps and confusion matrices to analyze classification results.
+  - Dense layers for final classification.
+
+### Model Summary
+- **Output Classes**: `3` (Glioma, Meningioma, Pituitary Tumor)
+- **Optimization**: Adam optimizer with learning rate scheduling.
+- **Loss Function**: Categorical Cross-Entropy.
 
 ---
 
-## Requirements
+## 📈 Results
 
-To run this project, you need the following Python libraries:
-- `tensorflow`
-- `numpy`
-- `matplotlib`
-- `seaborn`
-- `pandas`
-- `scikit-learn`
+| **Metric**           | **Value**          |
+|-----------------------|--------------------|
+| Validation Accuracy   | **99.2%**         |
+| Test Accuracy         | **98.9%**         |
+| Precision             | **99.0%**         |
+| Recall                | **99.0%**         |
+| F1-Score              | **99.0%**         |
 
-Install the dependencies using:
-```bash
-pip install -r requirements.txt
+### Training and Validation
+- **Training Accuracy**: **99.7%**
+- **Validation Loss**: **0.0326**
+
+### Training & Validation Curves
+Detailed training and validation accuracy/loss trends are included in the notebook. Grad-CAM visualizations are also provided to interpret the model’s decision-making.
+
