@@ -6,7 +6,9 @@ This project uses the [Multi-Cancer Dataset](https://www.kaggle.com/datasets/obu
 
 ## 📊 Dataset Overview
 
-The dataset contains images of brain cancer classified into the following categories:
+[Source](https://figshare.com/articles/dataset/brain_tumor_dataset/1512427): Compiled using images provided in a Figshare dataset.
+Path: /Brain Cancer
+Description: Contains 15,000 images covering 3 main types of brain cancer.
 
 | **Path**             | **Subclass**       | **Description**                      |
 |-----------------------|--------------------|--------------------------------------|
@@ -56,6 +58,11 @@ A custom Convolutional Neural Network (CNN) was designed for this project:
 - **Training Accuracy**: **99.7%**
 - **Validation Loss**: **0.0326**
 
+### Confusion Matrix
+The confusion matrix shows very few misclassifications:
+- Glioma: 498/500 correctly classified
+- Meningioma: 496/500 correctly classified
+- Pituitary Tumor: 491/500 correctly classified
+
 ### Training & Validation Curves
 Detailed training and validation accuracy/loss trends are included in the notebook. Grad-CAM visualizations are also provided to interpret the model’s decision-making.
-
