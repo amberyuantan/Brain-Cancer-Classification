@@ -4,14 +4,6 @@ This project uses the [Multi-Cancer Dataset](https://www.kaggle.com/datasets/obu
 
 ---
 
-## 🔍 Why This Project?
-Brain cancer is a critical health issue that requires early and accurate diagnosis to improve treatment outcomes. Traditional diagnostic methods rely heavily on manual interpretation of medical images, which can be time-consuming and prone to errors. This project aims to:
-- Automate the classification of brain cancer types using deep learning.
-- Provide an efficient, reliable, and scalable solution for medical professionals.
-- Support decision-making in clinical settings by highlighting key features in images.
-
----
-
 ## 📊 Dataset Overview
 
 [Source](https://figshare.com/articles/dataset/brain_tumor_dataset/1512427): Compiled using images provided in a Figshare dataset.
