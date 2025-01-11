@@ -28,7 +28,7 @@ Description: Contains 15,000 images covering 3 main types of brain cancer.
 
 ---
 
-## 🚀 Model Architecture
+## 🚀 Model
 
 A custom Convolutional Neural Network (CNN) was designed for this project:
 - **Input Size**: `(512, 512, 3)`
